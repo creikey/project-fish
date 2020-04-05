@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://plankton/PlanktonBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://plankton/BreakdownEffect.tscn" type="PackedScene" id=2]
+
+[node name="BreakdownPlankton" instance=ExtResource( 1 )]
+effect_pack = ExtResource( 2 )

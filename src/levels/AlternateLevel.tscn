@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Obstacle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://plankton/BreakdownPlankton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://levels/BasicLevel.gd" type="Script" id=3]
+
+[node name="BasicLevel" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Plankton" type="Node2D" parent="."]
+
+[node name="BreakdownPlankton" parent="Plankton" instance=ExtResource( 2 )]
+position = Vector2( 720, 540 )
+
+[node name="BreakdownPlankton2" parent="Plankton" instance=ExtResource( 2 )]
+position = Vector2( 360, 720 )
+
+[node name="BreakdownPlankton3" parent="Plankton" instance=ExtResource( 2 )]
+position = Vector2( 1260, 720 )
+
+[node name="BreakdownPlankton4" parent="Plankton" instance=ExtResource( 2 )]
+position = Vector2( 1080, 540 )
+chance_to_spawn = 0.5
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="Obstacle" parent="Obstacles" instance=ExtResource( 1 )]
+position = Vector2( 720, 360 )
+chance_to_spawn = 0.5
+
+[node name="Obstacle2" parent="Obstacles" instance=ExtResource( 1 )]
+position = Vector2( 540, 180 )
+
+[node name="Obstacle6" parent="Obstacles" instance=ExtResource( 1 )]
+position = Vector2( 1080, 180 )
+chance_to_spawn = 0.7
+
+[node name="Obstacle7" parent="Obstacles" instance=ExtResource( 1 )]
+position = Vector2( 1080, 720 )
+chance_to_spawn = 0.4
+
+[node name="Obstacle3" parent="Obstacles" instance=ExtResource( 1 )]
+position = Vector2( 720, 900 )
+
+[node name="Obstacle4" parent="Obstacles" instance=ExtResource( 1 )]
+position = Vector2( 1620, 360 )
+
+[node name="Obstacle5" parent="Obstacles" instance=ExtResource( 1 )]
+position = Vector2( 1620, 720 )
